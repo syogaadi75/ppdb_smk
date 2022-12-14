@@ -11,7 +11,7 @@
  Target Server Version : 100421
  File Encoding         : 65001
 
- Date: 01/12/2022 02:51:51
+ Date: 14/12/2022 18:40:39
 */
 
 SET NAMES utf8mb4;
@@ -193,7 +193,7 @@ CREATE TABLE `calon`  (
 -- Records of calon
 -- ----------------------------
 INSERT INTO `calon` VALUES (1, '2022-11-26', '2022-11-26', '2022-11-17', 'Yoga', 'L', 'Jember', '2000-02-02', 'Islam', 'sdfjsdlfksdf', 'sdfsdf', 'sdfsdf', 'sdfsdfsdf', '08128312', '08213123123', 'SMP 1 Kencong', 'A', 'B', 'C', 'RPL', 'TBSM', 'BDP', 50000, 'MUHAMMAD AFIF');
-INSERT INTO `calon` VALUES (2, '2022-11-30', '2022-11-30', NULL, 'M. Afif', 'L', 'Jember', '2004-06-01', 'Islam', 'Jl. Ppppp', 'ac', 'sdfsdf', 'sdfsdf', '07343434', '08234637434', 'SMPN 5 Kencong', 'Abc', 'Def', 'Ghi', 'RPL', 'MM', 'TBSM', 50000, 'MUHAMMAD AFIF');
+INSERT INTO `calon` VALUES (2, '2022-11-30', '2022-12-14', '', 'M. Afif', 'L', 'Jember', '2004-06-01', 'Islam', 'Jl. Ppppp', 'ac', 'sdfsdf', 'sdfsdf', '07343434', '08234637434', 'SMPN 5 Kencong', 'Abc', 'Def', 'Ghi', 'RPL', 'MM', 'TBSM', 50000, 'MUHAMMAD AFIF');
 
 -- ----------------------------
 -- Table structure for desa
@@ -826,6 +826,25 @@ CREATE TABLE `gender`  (
 -- ----------------------------
 INSERT INTO `gender` VALUES (1, 'L', 'Laki - laki');
 INSERT INTO `gender` VALUES (2, 'P', 'Perempuan');
+
+-- ----------------------------
+-- Table structure for kategori
+-- ----------------------------
+DROP TABLE IF EXISTS `kategori`;
+CREATE TABLE `kategori`  (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `nama_kategori` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `harga` bigint NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of kategori
+-- ----------------------------
+INSERT INTO `kategori` VALUES (1, 'Laki-Laki', 2100000);
+INSERT INTO `kategori` VALUES (3, 'Perempuan', 2200000);
+INSERT INTO `kategori` VALUES (4, 'Muslimah', 2350000);
+INSERT INTO `kategori` VALUES (5, 'Kategori Baru', 3000000);
 
 -- ----------------------------
 -- Table structure for kategori_biaya
@@ -1689,6 +1708,25 @@ CREATE TABLE `siswa_thn_lalu`  (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for titipan
+-- ----------------------------
+DROP TABLE IF EXISTS `titipan`;
+CREATE TABLE `titipan`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `no_pendaftaran` int NULL DEFAULT NULL,
+  `kode_paket` varchar(225) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `nominal` int NULL DEFAULT NULL,
+  `created_at` datetime NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of titipan
+-- ----------------------------
+INSERT INTO `titipan` VALUES (1, 1, 'RPL', 100000, '0000-00-00 00:00:00');
+INSERT INTO `titipan` VALUES (4, 2, 'MM', 200000, '0000-00-00 00:00:00');
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -1743,5 +1781,28 @@ FROM
 	calon
 	ON 
 		reg_siswa.no_pendaftaran = calon.no_pendaftaran ;
+
+-- ----------------------------
+-- View structure for v_titipan
+-- ----------------------------
+DROP VIEW IF EXISTS `v_titipan`;
+CREATE ALGORITHM = UNDEFINED SQL SECURITY DEFINER VIEW `v_titipan` AS SELECT
+	titipan.*, 
+	calon.nama, 
+	paket.paket AS nama_jurusan, 
+	calon.prioritas1, 
+	calon.prioritas2, 
+	calon.prioritas3, 
+	calon.gender
+FROM
+	titipan
+	INNER JOIN
+	calon
+	ON 
+		titipan.no_pendaftaran = calon.no_pendaftaran
+	INNER JOIN
+	paket
+	ON 
+		titipan.kode_paket = paket.kode ;
 
 SET FOREIGN_KEY_CHECKS = 1;
