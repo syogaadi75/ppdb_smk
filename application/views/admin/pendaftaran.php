@@ -47,12 +47,12 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="align-middle">
-                                                        <a href="<?php echo base_url() . "C_admin/tambah_siswa?petugas=" . $this->session->userdata('petugas'); ?>" class="btn btn-primary">Tambah Siswa</a>
+                                                        <a href="<?php echo base_url() . "C_admin/tambah_siswa?petugas=" . $this->session->userdata('petugas'); ?>" class="btn btn-primary">Tambah</a>
                                                     </td>
                                                     <td style="padding-left: 1rem;">
                                                         <form class="form-header" action="<?php echo base_url() . "C_admin/pendaftaran"; ?>" method="POST">
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" name="cari" placeholder="No Pendaftaran" aria-label="No Pendaftaran" aria-describedby="button-addon2">
+                                                                <input type="text" class="form-control" name="cari" placeholder="No Daftar" aria-label="No Pendaftaran" aria-describedby="button-addon2">
                                                                 <button class="btn btn-outline-primary" type="submit" id="button-addon2">Cari</button>
                                                             </div>
                                                         </form>

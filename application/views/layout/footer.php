@@ -5,7 +5,7 @@
             <script>
                 document.write(new Date().getFullYear());
             </script>
-            SMK PGRI 5 JEMBER. All Rights Reserved.
+            SMK PGRI 5 JEMBER
         </div>
         <div>
             made with ❤️ by

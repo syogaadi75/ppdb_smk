@@ -31,16 +31,16 @@
                     <!-- Content -->
                     <div class="container-xxl flex-grow-1 container-p-y">
                         <div class="row">
-                            <!-- Data Pendaftaran -->
+                            <!-- Rekap DU Perjurusan -->
                             <div class="col-12 order-0 mb-4">
                                 <div class="card h-100">
                                     <div class="card-header pb-0">
-                                        <div class="card-title mb-0 d-flex justify-content-between">
+                                        <div class="card-title mb-0 d-flex justify-content-between flex-lg-row flex-column gap-2">
                                             <div>
                                                 <h5 class="m-0 me-2"><?= $data['title'] ?></h5>
                                             </div>
                                             <div>
-                                                <button onclick="exportTableToExcel('tableData','Rekap')" type="button" class="btn btn-danger">
+                                                <button onclick="exportTableToExcel('tableData','Rekap DU Perjurusan')" type="button" class="btn btn-danger">
                                                     <i class="bx bx-file"></i>
                                                     Export Excel
                                                 </button>
@@ -99,7 +99,147 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--/ Data Pendaftaran -->
+                            <!--/ Rekap DU Perjurusan -->
+
+                            <!-- Rekap Titipan Perjurusan -->
+                            <div class="col-12 order-0 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header pb-0">
+                                        <div class="card-title mb-0 d-flex justify-content-between flex-lg-row flex-column gap-2">
+                                            <div>
+                                                <h5 class="m-0 me-2">Rekap Titipan Perjurusan</h5>
+                                            </div>
+                                            <div>
+                                                <button onclick="exportTableToExcel('tableTitipan','Rekap Titipan Perjurusan')" type="button" class="btn btn-danger">
+                                                    <i class="bx bx-file"></i>
+                                                    Export Excel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-4">
+                                        <div class="table-responsive text-nowrap">
+                                            <table class="table table-bordered" id="tableTitipan">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Titipan</th>
+                                                        <th>RPL</th>
+                                                        <th>MM</th>
+                                                        <th>TBSM</th>
+                                                        <th>AKL</th>
+                                                        <th>OTKP</th>
+                                                        <th>BDP</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Laki-Laki</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'L'))->num_rows(); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Perempuan</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'P'))->num_rows(); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Jumlah</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get('v_titipan')->num_rows(); ?></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Rekap Titipan Perjurusan -->
+
+                            <!-- Rekap Jumlah DU & Titipan Perjurusan -->
+                            <div class="col-12 order-0 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-header pb-0">
+                                        <div class="card-title mb-0 d-flex justify-content-between flex-lg-row flex-column gap-2">
+                                            <div>
+                                                <h5 class="m-0 me-2">Rekap Jumlah DU & Titipan Perjurusan</h5>
+                                            </div>
+                                            <div>
+                                                <button onclick="exportTableToExcel('tableJumlah','Rekap Jumlah DU & Titipan Perjurusan')" type="button" class="btn btn-danger">
+                                                    <i class="bx bx-file"></i>
+                                                    Export Excel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body pt-4">
+                                        <div class="table-responsive text-nowrap">
+                                            <table class="table table-bordered" id="tableJumlah">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Titipan</th>
+                                                        <th>RPL</th>
+                                                        <th>MM</th>
+                                                        <th>TBSM</th>
+                                                        <th>AKL</th>
+                                                        <th>OTKP</th>
+                                                        <th>BDP</th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>Laki-Laki</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('gender' => 'L'))->num_rows(); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Perempuan</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('gender' => 'P'))->num_rows(); ?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Jumlah</th>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get('v_titipan')->num_rows() + $this->db->get('du_v')->num_rows(); ?></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ Rekap Jumlah DU & Titipan Perjurusan -->
                         </div>
                     </div>
                     <!-- / Content -->

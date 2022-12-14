@@ -40,6 +40,24 @@
                 <div data-i18n="Analytics">Daftar Ulang</div>
             </a>
         </li>
+        <!-- Kategori -->
+        <li class="menu-item <?php if ($nav == 'Kategori') {
+                                    echo "active";
+                                } ?>">
+            <a href="<?= base_url('C_admin/kategori') ?>" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-list-ul"></i>
+                <div data-i18n="Analytics">Kategori</div>
+            </a>
+        </li>
+        <!-- Titipan -->
+        <li class="menu-item <?php if ($nav == 'Titipan') {
+                                    echo "active";
+                                } ?>">
+            <a href="<?= base_url('C_admin/titipan') ?>" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-note"></i>
+                <div data-i18n="Analytics">Titipan</div>
+            </a>
+        </li>
 
         <!-- Forms & Tables -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Rekap & Laporan</span></li>

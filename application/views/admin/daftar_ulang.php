@@ -65,7 +65,7 @@
                                                     <td style="padding-left: 1rem;">
                                                         <form class="form-header" action="<?php echo base_url() . "C_admin/daftar_ulang"; ?>" method="POST">
                                                             <div class="input-group">
-                                                                <input type="text" class="form-control" name="cari" placeholder="No Pendaftaran" aria-label="No Pendaftaran" aria-describedby="button-addon2">
+                                                                <input type="text" class="form-control" name="cari" placeholder="No Daftar" aria-label="No Pendaftaran" aria-describedby="button-addon2">
                                                                 <button class="btn btn-outline-primary" type="submit" id="button-addon2">Cari</button>
                                                             </div>
                                                         </form>
@@ -228,9 +228,9 @@
                                                 <label>Kategori</label>
                                                 <select class="form-control" name="kategori" id="kategori" onchange="tentukanHarga()">
                                                     <option value="">Pilih Kategori</option>
-                                                    <option value="L">Laki-Laki</option>
-                                                    <option value="P">Perempuan</option>
-                                                    <option value="M">Muslimah</option>
+                                                    <?php foreach ($kategori_du as $kdu) { ?>
+                                                        <option value="<?= $kdu->id; ?>"><?= $kdu->nama_kategori; ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <div class="col mb-0">
@@ -337,43 +337,25 @@
         });
 
         function tentukanHarga() {
-            var prioritas = $("#prioritas").val()
-            var kategori = $("#kategori").val()
-            if (kategori == '') {
-                $("#kategori").attr('disabled', false)
-            } else {
-                if (kategori == 'L') {
-                    if (prioritas == 'RPL' || prioritas == 'TBSM' || prioritas == 'MM') {
-                        // Putra Teknik
-                        $("#biaya").val(2115000);
-                        $("#biaya1").val(2115000);
+            $.ajax({
+                url: base_url + 'CrudController/getById/kategori/' + $("#kategori").val(),
+                type: 'get',
+                dataType: 'json',
+                success: function(res) {
+                    var prioritas = $("#prioritas").val()
+                    var kategori = $("#kategori").val()
+                    if (kategori == '') {
+                        $("#kategori").attr('disabled', false)
                     } else {
-                        // Putra Bismen
-                        $("#biaya").val(2100000);
-                        $("#biaya1").val(2100000);
-                    }
-                } else if (kategori == 'P') {
-                    if (prioritas == 'RPL' || prioritas == 'TBSM' || prioritas == 'MM') {
-                        // Putri Teknik
-                        $("#biaya").val(2215000);
-                        $("#biaya1").val(2215000);
-                    } else {
-                        // Putri Bismen
-                        $("#biaya").val(2200000);
-                        $("#biaya1").val(2200000);
-                    }
-                } else {
-                    if (prioritas == 'RPL' || prioritas == 'TBSM' || prioritas == 'MM') {
-                        // Muslimah Teknik
-                        $("#biaya").val(2365000);
-                        $("#biaya1").val(2365000);
-                    } else {
-                        // Muslimah Bismen
-                        $("#biaya").val(2350000);
-                        $("#biaya1").val(2350000);
+                        var harga = parseInt(res.harga);
+                        if (prioritas == 'RPL' || prioritas == 'TBSM' || prioritas == 'MM') {
+                            harga += 15000
+                        }
+                        $("#biaya").val(harga);
+                        $("#biaya1").val(harga);
                     }
                 }
-            }
+            })
         }
 
         $("#nominal").keyup(function() {

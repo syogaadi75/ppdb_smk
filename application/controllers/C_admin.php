@@ -47,6 +47,31 @@ class C_admin extends CI_Controller
 			$this->load->view('admin/pendaftaran', $data);
 		}
 	}
+	public function kategori()
+	{
+		if ($this->session->userdata('petugas') == null) {
+			redirect(base_url());
+		} else {
+			$data['kategori'] = $this->db->get('kategori')->result();
+			$data['petugas'] = $this->session->userdata('petugas');
+			$data['dataUser'] = $this->db->get_where('user', array('username' => $data['petugas']))->row();
+			$data['level'] = $data['dataUser']->status;
+			$this->load->view('admin/kategori', $data);
+		}
+	}
+	public function titipan()
+	{
+		if ($this->session->userdata('petugas') == null) {
+			redirect(base_url());
+		} else {
+			$data['titipan'] = $this->db->get('v_titipan')->result();
+			$data['calon'] = $this->db->get('calon')->result();
+			$data['petugas'] = $this->session->userdata('petugas');
+			$data['dataUser'] = $this->db->get_where('user', array('username' => $data['petugas']))->row();
+			$data['level'] = $data['dataUser']->status;
+			$this->load->view('admin/titipan', $data);
+		}
+	}
 	public function daftar_ulang()
 	{
 		if ($this->session->userdata('petugas') == null) {
@@ -60,6 +85,7 @@ class C_admin extends CI_Controller
 				$data['re_calon'] = array();
 			}
 			$data['kategori'] = $this->M_admin->kategori()->result();
+			$data['kategori_du'] = $this->db->get_where('kategori')->result();
 			$data['reg_siswa'] = $this->db->get('calon', array('no_pendaftaran' => $cari));
 			$data['petugas'] = $this->session->userdata('petugas');
 			$data['dataUser'] = $this->db->get_where('user', array('username' => $data['petugas']))->row();
@@ -67,6 +93,7 @@ class C_admin extends CI_Controller
 			$this->load->view('admin/daftar_ulang', $data);
 		}
 	}
+
 	public function kwitansi_du()
 	{
 		if ($this->session->userdata('petugas') == null) {

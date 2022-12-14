@@ -47,8 +47,8 @@
                                     </div>
                                     <div class="card-body pt-4">
                                         <form class="form-header" action="<?php echo base_url() . "C_admin/cari_laporan_pendaftaran"; ?>" method="POST">
-                                            <div class="mb-4 d-flex w-full flex-row gap-4 align-items-center">
-                                                <div class="d-flex align-items-center gap-2">
+                                            <div class="mb-4 d-flex w-full flex-row gap-4 align-items-lg-center flex-lg-row flex-column">
+                                                <div class="d-flex align-items-center gap-2 ">
                                                     <label>Tgl.Awal: </label>
                                                     <input class="form-control" type="date" id="tgl" name="tgl_awal" placeholder="Tanggal Bayar Awal">
                                                 </div>

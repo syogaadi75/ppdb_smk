@@ -35,7 +35,7 @@
                             <div class="col-12 order-0 mb-4">
                                 <div class="card h-100">
                                     <div class="card-header pb-0">
-                                        <div class="card-title mb-0 d-flex justify-content-between">
+                                        <div class="card-title mb-0 d-flex justify-content-between flex-lg-row flex-column gap-2">
                                             <div>
                                                 <h5 class="m-0 me-2"><?= $data['title'] ?></h5>
                                                 <form class="form-header" action="<?php echo base_url() . "C_admin/rekap_persekolah"; ?>" method="POST">
