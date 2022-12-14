@@ -125,8 +125,8 @@
                         <h4 class="font-bold lg:leading-normal leading-normal text-4xl lg:text-5xl mb-5 mt-4">Penerimaan Peserta <br> Didik Baru</h4>
                         <p class="text-slate-400 text-lg max-w-xl">SMK PGRI 05 JEMBER menumbuhkembangkan sumber daya siswa di bidang akademik dan non akademik.</p>
 
-                        <div class="mt-6">
-                            <button onclick="scrollToPendaftaran()" class="btn btn-icon rounded-full bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white">
+                        <div class="mt-6" onclick="scrollToPendaftaran()">
+                            <button class="btn btn-icon rounded-full bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white">
                                 <i data-feather="arrow-down" class="h-4 w-4"></i>
                             </button>
                             <span class="font-semibold ml-2 align-middle">Form Pendaftaran</span>
