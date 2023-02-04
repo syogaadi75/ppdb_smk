@@ -117,7 +117,7 @@
     <div style="margin-left: 25px !important;">
       <b class="font">Keterangan :</b>
       <li style="padding: 0px 20px; padding-top: 3px;">
-        <span class="fontku">Daftar Ulang dapat dilaksanakan mulai tanggal 01 Desember 2021 s.d 13 Juli 2022 </span>
+        <span class="fontku">Daftar Ulang dapat dilaksanakan mulai tanggal 01 Desember 2022 s.d 13 Juli 2023 </span>
       </li>
       <li style="padding: 0px 20px; margin-top: -5px;">
         <span class="fontku">Simpan Kwitansi Pendaftaran ini baik-baik dan bawa pada saat Daftar Ulang</span>

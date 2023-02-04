@@ -54,11 +54,11 @@
                                                     <tr>
                                                         <th>Pendaftaran</th>
                                                         <th>RPL</th>
-                                                        <th>MM</th>
-                                                        <th>TBSM</th>
-                                                        <th>AKL</th>
-                                                        <th>OTKP</th>
-                                                        <th>BDP</th>
+                                                        <th>DKV</th>
+                                                        <th>TSM</th>
+                                                        <th>AK</th>
+                                                        <th>MP</th>
+                                                        <th>BD</th>
                                                         <th>Jumlah</th>
                                                     </tr>
                                                 </thead>
@@ -66,31 +66,31 @@
                                                     <tr>
                                                         <th>Laki-Laki</th>
                                                         <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'RPL', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MM', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TBS', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AKL', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'OTK', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BDP', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'DKV', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TSM', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AK', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MP', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BD', 'uang_pendaftaran >=' => 50000, 'gender' => 'L'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('calon', array('gender' => 'L', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Perempuan</th>
                                                         <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'RPL', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MM', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TBS', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AKL', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'OTK', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BDP', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'DKV', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TSM', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AK', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MP', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BD', 'uang_pendaftaran >=' => 50000, 'gender' => 'P'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('calon', array('gender' => 'P', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Total</th>
                                                         <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'RPL', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MM', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TBS', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AKL', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'OTK', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BDP', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'DKV', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'TSM', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'AK', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'MP', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('calon', array('prioritas1' => 'BD', 'uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('calon', array('uang_pendaftaran >=' => 50000))->num_rows(); ?></td>
                                                     </tr>
                                                 </tbody>

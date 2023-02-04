@@ -112,7 +112,7 @@
 			<b class="font">Keterangan :</b>
 			<li style="padding: 0px 20px; padding-top: 3px;">
 				<span class="fontku">Peserta didik baru yang sudah melaksanakan daftar ulang masuk pada : <br>
-					&nbsp;&nbsp;&nbsp;&nbsp;Hari : Kamis, Tanggal : 14 Juli 2022 Jam 07.00 WIB. <br>&nbsp;&nbsp;&nbsp; Memakai seragam biru putih dari
+					&nbsp;&nbsp;&nbsp;&nbsp;Hari : Kamis, Tanggal : 14 Juli 2023 Jam 07.00 WIB. <br>&nbsp;&nbsp;&nbsp; Memakai seragam biru putih dari
 					SMP/MTs</span>
 			</li>
 			<li style="padding: 0px 20px; margin-top: -5px;">

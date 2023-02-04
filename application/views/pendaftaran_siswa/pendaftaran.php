@@ -483,24 +483,24 @@
                         abbr: 'RPL'
                     },
                     {
-                        state: 'Multimedia',
-                        abbr: 'MM'
+                        state: 'Desain Komunikasi Visual',
+                        abbr: 'DKV'
                     },
                     {
-                        state: 'Teknik & Bisnis Sepeda Motor',
-                        abbr: 'TBSM'
+                        state: 'Teknik Sepeda Motor',
+                        abbr: 'TSM'
                     },
                     {
-                        state: 'Bisnis Daring & Pemasaran',
-                        abbr: 'BDP'
+                        state: 'Bisnis Digital',
+                        abbr: 'BD'
                     },
                     {
-                        state: 'Akuntansi & Keuangan Lembaga',
-                        abbr: 'AKL'
+                        state: 'Akuntansi',
+                        abbr: 'AK'
                     },
                     {
-                        state: 'Otomatisasi & Tata Kelola Perkantoran',
-                        abbr: 'OTKP'
+                        state: 'Manajemen Perkantoran',
+                        abbr: 'MP'
                     },
                 ],
                 itemsAltp2: [{
@@ -508,24 +508,24 @@
                         abbr: 'RPL'
                     },
                     {
-                        state: 'Multimedia',
-                        abbr: 'MM'
+                        state: 'Desain Komunikasi Visual',
+                        abbr: 'DKV'
                     },
                     {
-                        state: 'Teknik & Bisnis Sepeda Motor',
-                        abbr: 'TBSM'
+                        state: 'Teknik Sepeda Motor',
+                        abbr: 'TSM'
                     },
                     {
-                        state: 'Bisnis Daring & Pemasaran',
-                        abbr: 'BDP'
+                        state: 'Bisnis Digital',
+                        abbr: 'BD'
                     },
                     {
-                        state: 'Akuntansi & Keuangan Lembaga',
-                        abbr: 'AKL'
+                        state: 'Akuntansi',
+                        abbr: 'AK'
                     },
                     {
-                        state: 'Otomatisasi & Tata Kelola Perkantoran',
-                        abbr: 'OTKP'
+                        state: 'Manajemen Perkantoran',
+                        abbr: 'MP'
                     },
                 ],
                 itemsAltp3: [{
@@ -533,24 +533,24 @@
                         abbr: 'RPL'
                     },
                     {
-                        state: 'Multimedia',
-                        abbr: 'MM'
+                        state: 'Desain Komunikasi Visual',
+                        abbr: 'DKV'
                     },
                     {
-                        state: 'Teknik & Bisnis Sepeda Motor',
-                        abbr: 'TBSM'
+                        state: 'Teknik Sepeda Motor',
+                        abbr: 'TSM'
                     },
                     {
-                        state: 'Bisnis Daring & Pemasaran',
-                        abbr: 'BDP'
+                        state: 'Bisnis Digital',
+                        abbr: 'BD'
                     },
                     {
-                        state: 'Akuntansi & Keuangan Lembaga',
-                        abbr: 'AKL'
+                        state: 'Akuntansi',
+                        abbr: 'AK'
                     },
                     {
-                        state: 'Otomatisasi & Tata Kelola Perkantoran',
-                        abbr: 'OTKP'
+                        state: 'Manajemen Perkantoran',
+                        abbr: 'MP'
                     },
                 ],
                 stat1: false,

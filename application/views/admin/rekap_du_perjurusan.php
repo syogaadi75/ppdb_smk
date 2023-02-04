@@ -54,11 +54,11 @@
                                                     <tr>
                                                         <th>Daftar Ulang</th>
                                                         <th>RPL</th>
-                                                        <th>MM</th>
-                                                        <th>TBSM</th>
-                                                        <th>AKL</th>
-                                                        <th>OTKP</th>
-                                                        <th>BDP</th>
+                                                        <th>DKV</th>
+                                                        <th>TSM</th>
+                                                        <th>AK</th>
+                                                        <th>MP</th>
+                                                        <th>BD</th>
                                                         <th>Total</th>
                                                     </tr>
                                                 </thead>
@@ -66,31 +66,31 @@
                                                     <tr>
                                                         <th>Laki-Laki</th>
                                                         <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'DKV', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TSM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AK', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BD', 'gender' => 'L'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('du_v', array('gender' => 'L'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Perempuan</th>
                                                         <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'DKV', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TSM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AK', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BD', 'gender' => 'P'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('du_v', array('gender' => 'P'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Jumlah</th>
                                                         <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'RPL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AKL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BDP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'DKV'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'TSM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'AK'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'MP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('du_v', array('paket_keahlian' => 'BD'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get('du_v')->num_rows(); ?></td>
                                                     </tr>
                                                 </tbody>
@@ -124,11 +124,11 @@
                                                     <tr>
                                                         <th>Titipan</th>
                                                         <th>RPL</th>
-                                                        <th>MM</th>
-                                                        <th>TBSM</th>
-                                                        <th>AKL</th>
-                                                        <th>OTKP</th>
-                                                        <th>BDP</th>
+                                                        <th>DKV</th>
+                                                        <th>TSM</th>
+                                                        <th>AK</th>
+                                                        <th>MP</th>
+                                                        <th>BD</th>
                                                         <th>Total</th>
                                                     </tr>
                                                 </thead>
@@ -136,31 +136,31 @@
                                                     <tr>
                                                         <th>Laki-Laki</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD', 'gender' => 'L'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'L'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Perempuan</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD', 'gender' => 'P'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'P'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Jumlah</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get('v_titipan')->num_rows(); ?></td>
                                                     </tr>
                                                 </tbody>
@@ -194,11 +194,11 @@
                                                     <tr>
                                                         <th>Titipan</th>
                                                         <th>RPL</th>
-                                                        <th>MM</th>
-                                                        <th>TBSM</th>
-                                                        <th>AKL</th>
-                                                        <th>OTKP</th>
-                                                        <th>BDP</th>
+                                                        <th>DKV</th>
+                                                        <th>TSM</th>
+                                                        <th>AK</th>
+                                                        <th>MP</th>
+                                                        <th>BD</th>
                                                         <th>Total</th>
                                                     </tr>
                                                 </thead>
@@ -206,31 +206,31 @@
                                                     <tr>
                                                         <th>Laki-Laki</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'L'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'DKV', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TSM', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AK', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MP', 'gender' => 'L'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD', 'gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BD', 'gender' => 'L'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'L'))->num_rows() + $this->db->get_where('du_v', array('gender' => 'L'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Perempuan</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP', 'gender' => 'P'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'DKV', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TSM', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AK', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MP', 'gender' => 'P'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD', 'gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BD', 'gender' => 'P'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('gender' => 'P'))->num_rows() + $this->db->get_where('du_v', array('gender' => 'P'))->num_rows(); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Jumlah</th>
                                                         <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'RPL'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'RPL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MM'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TBSM'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TBSM'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AKL'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AKL'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'OTKP'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'OTKP'))->num_rows(); ?></td>
-                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BDP'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BDP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'DKV'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'DKV'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'TSM'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'TSM'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'AK'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'AK'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'MP'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'MP'))->num_rows(); ?></td>
+                                                        <td><?php echo $this->db->get_where('v_titipan', array('kode_paket' => 'BD'))->num_rows() + $this->db->get_where('du_v', array('paket_keahlian' => 'BD'))->num_rows(); ?></td>
                                                         <td><?php echo $this->db->get('v_titipan')->num_rows() + $this->db->get('du_v')->num_rows(); ?></td>
                                                     </tr>
                                                 </tbody>
